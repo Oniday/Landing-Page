@@ -1,4 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Noto Sans Mono", monospace;
   font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  height: 650px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ilus {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+}
+
+.text-container {
+  text-align: center;
+  width: 40%;
+}
+
+.text-container h1 {
+  font-size: 55px;
+}
+
+.text-container p {
+  margin: 10px 0 30px 0;
+}
+
+.cta {
+  display: inline-block;
+  background: steelblue;
+  padding: 15px 0;
+  width: 150px;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .ilus {
+    order: -1;
+    width: 70%;
+    margin: 80px 0 30px;
+  }
+  .text-container {
+    width: 90%;
+  }
+  .text-container h1 {
+    font-size: 30px;
+  }
 }
